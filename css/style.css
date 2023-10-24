@@ -127,6 +127,32 @@ h2 {
     border-radius: 10px;
 }
 
+.genre.hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.genre.hidden .disc-list,
+.genre.hidden .more-genre {
+    display: none;
+}
+
+.genre.hidden .genre-name {
+    margin: 0;
+    border: none;
+}
+
+.genre .arrow {
+    display: none;
+}
+.genre.hidden .arrow {
+    font-weight: bold;
+    font-size: 200%;
+    display: block;
+}
+
 .genre:last-child {
     margin-bottom: 0;
 }
