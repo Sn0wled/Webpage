@@ -134,6 +134,12 @@ h2 {
     padding: 15px 20px;
 }
 
+.genre.hidden::after {
+    content: "︾";
+    font-weight: bold;
+    font-size: 200%;
+}
+
 .genre.hidden .disc-list,
 .genre.hidden .more-genre {
     display: none;
@@ -142,15 +148,6 @@ h2 {
 .genre.hidden .genre-name {
     margin: 0;
     border: none;
-}
-
-.genre .arrow {
-    display: none;
-}
-.genre.hidden .arrow {
-    font-weight: bold;
-    font-size: 200%;
-    display: block;
 }
 
 .genre:last-child {
@@ -165,6 +162,7 @@ h2 {
     line-height: 35px;
     font-size: 2em;
     letter-spacing: 1px;
+    width: 100%;
 }
 
 .disc-list {
