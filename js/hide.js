@@ -1,7 +1,7 @@
-let asd = document.querySelectorAll(".genre");
+let asd = document.querySelectorAll(".genre-name");
 for (let i = 0; i < asd.length; i++) {
     // Обработка каждого элемента здесь
     asd[i].onclick = function() {
-        asd[i].classList.toggle('hidden');
+        asd[i].parentNode.classList.toggle('hidden');
     }
 }
