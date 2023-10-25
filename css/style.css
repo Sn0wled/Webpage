@@ -127,6 +127,29 @@ h2 {
     border-radius: 10px;
 }
 
+.genre.hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.genre.hidden::after {
+    content: "︾";
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.genre.hidden .disc-list,
+.genre.hidden .more-genre {
+    display: none;
+}
+
+.genre.hidden .genre-name {
+    margin: 0;
+    border: none;
+}
+
 .genre:last-child {
     margin-bottom: 0;
 }
@@ -139,6 +162,7 @@ h2 {
     line-height: 35px;
     font-size: 2em;
     letter-spacing: 1px;
+    width: 100%;
 }
 
 .disc-list {
