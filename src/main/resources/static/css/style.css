@@ -166,8 +166,8 @@ h2 {
 }
 
 .disc-list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 0 15px;
 }
 
