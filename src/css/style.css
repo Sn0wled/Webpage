@@ -1,5 +1,5 @@
 body {
-    background-color: #CCCCFF;
+    background-color: #bde0ff;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 19px;
     line-height: 23px;
@@ -39,6 +39,7 @@ ul {
     display: flex;
     padding: 10px 30px;
     border-bottom: 1px solid black;
+    position: relative;
 }
 
 main {
@@ -73,10 +74,13 @@ main {
     margin-bottom: auto;
     background-color: aliceblue;
     padding: 10px;
-    width: 50px;
-    height: 50px;
     border: 2px solid black;
     border-radius: 50%;
+}
+
+.cart img {
+    width: 50px;
+    height: 50px;
 }
 
 .cart:hover {
@@ -102,14 +106,14 @@ main {
     padding: 10px 40px;
     width: 700px;
     justify-content: space-between;
-    background-color: #84b6df;
+    background-color: #bde0ff;
 }
 
 .nav-item {
     padding: 10px;
 }
 main {
-    background-image: url("../img/background.jpg");
+    /*background-image: url("../../public/img/background.jpg");*/
     background-attachment: fixed;
     padding-bottom: 20px;
 }
@@ -120,34 +124,11 @@ h2 {
 .genre {
     width: 1400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     border: 2px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     background-color: white;
-    border-radius: 10px;
-}
-
-.genre.hidden {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-.genre.hidden::after {
-    content: "︾";
-    font-weight: bold;
-    font-size: 200%;
-}
-
-.genre.hidden .disc-list,
-.genre.hidden .more-genre {
-    display: none;
-}
-
-.genre.hidden .genre-name {
-    margin: 0;
-    border: none;
+    /*border-radius: 10px;*/
 }
 
 .genre:last-child {
@@ -162,13 +143,13 @@ h2 {
     line-height: 35px;
     font-size: 2em;
     letter-spacing: 1px;
-    width: 100%;
 }
 
 .disc-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0 15px;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 50px;
 }
 
 .disc-item {
@@ -253,4 +234,54 @@ h2 {
 
 .more-genre:active {
     opacity: 0.5;
+}
+
+.cart-pushup {
+    width: 450px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid darkgray;
+    max-height: 300px;
+    overflow:hidden; 
+    overflow-y:scroll;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 2;
+}
+.cart-pushup p {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+.cart-pushup::-webkit-scrollbar {
+    width: 7px;               /* ширина scrollbar */
+}
+.cart-pushup::-webkit-scrollbar-thumb {   /* цвет плашки */
+border-radius: 10px;       /* закругления плашки */
+border: 2px solid black;  /* padding вокруг плашки */
+}
+
+.cart-pushup ul{
+    margin-bottom: 10px;
+    display:  grid;
+    gap: 5px;
+}
+
+.cart-pushup li {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid darkgray;
+    padding: 5px;
+}
+
+.cart-pushup ul button{
+    align-self: center;
+    padding: 3px;
+}
+
+.hidden {
+    display: none;
 }
